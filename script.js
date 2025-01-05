@@ -4,9 +4,13 @@ const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 let currentSlide = 0;
 
-// Show Slide
+// Show Slide with fade effect
 function showSlide(index) {
     slides.forEach((slide, i) => {
+        slide.classList.remove('active'); // Remove 'active' class from all slides
+        if (i === index) {
+            slide.classList.add('active'); // Add 'active' class to the current slide
+        }
         slide.style.transform = `translateX(-${index * 100}%)`;
     });
 }

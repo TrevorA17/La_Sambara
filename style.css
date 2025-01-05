@@ -11,9 +11,27 @@ body {
 }
 
 /* Navbar */
+
+.navbar-logo {
+    width: 18mm; /* Set the logo width to 18mm */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect on logo */
+.navbar-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Navbar Logo link */
+.logo a {
+    display: block; /* Ensures the entire logo area is clickable */
+}
+
 header {
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    background: #1D252C; /* Dark primary color for the background */
+    color: #fff; /* White text for contrast */
     position: fixed;
     width: 100%;
     top: 0;
@@ -31,7 +49,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: 'Restora', sans-serif;
+    color: #C6B783; /* Lighter primary color for the logo */
 }
 
 .nav-links {
@@ -41,15 +59,14 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #9F9857; /* A medium primary color for links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #9F9857; /* Updated to primary color */
+    color: #C6B783; /* Lighter primary color for hover effect */
 }
-
 /* Hero Section */
 .hero {
     background: url('img/hero.jpg') no-repeat center center/cover;
@@ -98,14 +115,21 @@ header {
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out; /* Smoother transition for the slides */
 }
 
 .carousel-slide {
     min-width: 100%;
-    height: 60vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    opacity: 0; /* Start with no opacity */
+    transition: opacity 1.5s ease-in-out; /* Fade effect with a smooth transition */
+}
+
+/* Show active slide */
+.carousel-slide.active {
+    opacity: 1; /* Fade in the active slide */
 }
 
 .carousel-btn {
@@ -113,7 +137,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     font-size: 2em;
-    color: white;
+    color: #9F9857;
     background: rgba(0, 0, 0, 0.5);
     border: none;
     cursor: pointer;
@@ -128,32 +152,179 @@ header {
     right: 10px;
 }
 
-/* About Section */
-.about {
+
+/* testimonials  */
+.testimonials {
     padding: 4em 2em;
     text-align: center;
     background: #f9f9f9;
 }
 
-.about h2 {
+.testimonials h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
-    color: #1D252C; /* Updated to primary color */
+    color: #1D252C;
 }
 
-.about p {
-    font-size: 1.2em;
-    color: #555;
+.testimonial-container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
 }
+
+.testimonial {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #9F9857;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+ /* newsletter section  */
+.newsletter {
+    padding: 4em 2em;
+    text-align: center;
+    background: #9F9857; /* Primary color for visual impact */
+    color: #fff;
+}
+
+.newsletter h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.newsletter p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.newsletter input {
+    padding: 0.7em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 0.7em 1.5em;
+    background: #C6B783; /* Lighter gold */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #9F9857;
+}
+
 
 /* Footer */
+/* Footer */
 footer {
-    background: #1D252C; /* Updated to primary color */
+    background: #1D252C; /* Primary color */
     color: white;
-    text-align: center;
-    padding: 1em 0;
+    padding: 3em 2em;
     margin-top: 2em;
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.footer-addresses {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2em;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #C6B783; /* Primary color */
+}
+
+.footer-column p {
+    font-size: 1em;
+    color: #C5D5A4; /* Secondary color */
+}
+
+/* Social Media */
+.footer-social {
+    display: flex;
+    gap: 1.5em;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Logo */
+.footer-logo-img {
+    width: 18mm; /* Set the logo width to 18mm */
+    height: auto;
+    display: block;
+    margin-top: 1.5em;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.footer-logo-img:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+/* Footer Rights */
+.footer-rights {
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.footer-rights p {
+    font-size: 1em;
+    color: #C5D5A4; /* Secondary color */
+}
+
 
 /* Animations */
 @keyframes fadeIn {
