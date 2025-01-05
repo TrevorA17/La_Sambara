@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     overflow-x: hidden;
 }
 
@@ -31,6 +31,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
+    font-family: 'Restora', sans-serif;
 }
 
 .nav-links {
@@ -46,7 +47,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #d4af37;
+    color: #9F9857; /* Updated to primary color */
 }
 
 /* Hero Section */
@@ -73,7 +74,7 @@ header {
 }
 
 .cta-btn {
-    background: #d4af37;
+    background: #9F9857; /* Updated to primary color */
     color: #fff;
     padding: 0.7em 1.5em;
     text-decoration: none;
@@ -83,7 +84,7 @@ header {
 }
 
 .cta-btn:hover {
-    background: #b38b2c;
+    background: #C6B783; /* Updated to primary color */
 }
 
 /* Carousel */
@@ -137,6 +138,7 @@ header {
 .about h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
+    color: #1D252C; /* Updated to primary color */
 }
 
 .about p {
@@ -144,10 +146,9 @@ header {
     color: #555;
 }
 
-
 /* Footer */
 footer {
-    background: #333;
+    background: #1D252C; /* Updated to primary color */
     color: white;
     text-align: center;
     padding: 1em 0;
